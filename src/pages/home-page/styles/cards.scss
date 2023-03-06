@@ -1,0 +1,80 @@
+.ai-area__cards {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 560px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 1em;
+    }
+
+    @media screen and (min-width: 960px) {
+        width: 85%;
+        row-gap: 1em
+    }
+
+
+
+
+    &__card {
+        padding: 1.3em 1.2em;
+        margin: 0.4em 1em;
+        background-color: var(--color-dark);
+        border-radius: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+
+        @media screen and (min-width: 560px) {
+            margin-inline: 0;
+            padding: 1.5em 2em;
+
+        }
+
+
+        &__icon-backgroud {
+            padding: 0.9em;
+            border-radius: 14px;
+            display: grid;
+            place-content: center;
+        }
+
+        .pink-bg {
+            background-color: #373155;
+        }
+
+        .blue-bg {
+            background-color: #2C3455;
+        }
+
+        .green-bg {
+            background-color: #274255;
+        }
+
+        .yellow-bg {
+            background-color: #3D413F;
+        }
+
+        &__title {
+            font-size: 1.25rem;
+
+        }
+
+        &__description {
+
+            line-height: 1.5;
+            font-size: 0.875rem;
+            opacity: 0.5;
+
+            @media screen and (min-width: 960px) {
+                line-height: 1.8;
+
+            }
+        }
+    }
+
+}
