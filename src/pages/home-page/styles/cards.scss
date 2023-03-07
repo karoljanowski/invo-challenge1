@@ -1,25 +1,10 @@
-.ai-area__cards {
+.cards-component {
     display: flex;
     flex-direction: column;
 
-    @media screen and (min-width: 560px) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        column-gap: 1em;
-    }
-
-    @media screen and (min-width: 960px) {
-        width: 85%;
-        row-gap: 1em
-    }
-
-
-
-
-    &__card {
-        padding: 1.3em 1.2em;
-        margin: 0.4em 1em;
+    & &__card {
+        padding: 1.29em 1.4em;
+        margin: 0.5em 1em;
         background-color: var(--color-dark);
         border-radius: 20px;
         text-align: center;
@@ -27,54 +12,81 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 1em;
+        gap: 0.9em;
 
-        @media screen and (min-width: 560px) {
+    }
+
+    & &__icon-backgroud {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        display: grid;
+        place-content: center;
+    }
+
+    .pink-bg {
+        background-color: var(--color-pink-bg);
+    }
+
+    .blue-bg {
+        background-color: var(--color-blue-bg);
+    }
+
+    .green-bg {
+        background-color: var(--color-green-bg);
+    }
+
+    .yellow-bg {
+        background-color: var(--color-yellow-bg);
+    }
+
+    & &__title {
+        font-size: 1.25rem;
+
+    }
+
+    & &__description {
+        line-height: 22px;
+        letter-spacing: 0px;
+        font-size: 0.875rem;
+        opacity: 0.5;
+
+    }
+
+    @media screen and (min-width: 560px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 1em;
+
+        & &__card {
             margin-inline: 0;
-            padding: 1.5em 2em;
-
+            padding: 1.29em 1em;
         }
 
-
-        &__icon-backgroud {
-            padding: 0.9em;
-            border-radius: 14px;
-            display: grid;
-            place-content: center;
-        }
-
-        .pink-bg {
-            background-color: #373155;
-        }
-
-        .blue-bg {
-            background-color: #2C3455;
-        }
-
-        .green-bg {
-            background-color: #274255;
-        }
-
-        .yellow-bg {
-            background-color: #3D413F;
-        }
-
-        &__title {
-            font-size: 1.25rem;
-
-        }
-
-        &__description {
-
-            line-height: 1.5;
-            font-size: 0.875rem;
-            opacity: 0.5;
-
-            @media screen and (min-width: 960px) {
-                line-height: 1.8;
-
-            }
+        & &__title {
+            letter-spacing: 0px;
         }
     }
 
+    @media screen and (min-width: 1200px) {
+        margin-top: 1em;
+        gap: 1.85rem 1.5rem;
+
+        & &__card {
+            margin: 0;
+            padding: 1.55em 1em;
+            border-radius: 24px;
+        }
+
+        & &__icon-backgroud {
+            width: 64px;
+            height: 64px;
+        }
+
+        & &__description {
+            font-size: 1rem;
+            line-height: 24px;
+        }
+    }
 }
